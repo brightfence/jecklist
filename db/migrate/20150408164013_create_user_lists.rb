@@ -8,5 +8,10 @@ class CreateUserLists < ActiveRecord::Migration
     end
     add_foreign_key :user_lists, :users
     add_foreign_key :user_lists, :lists
+
+    create_join_table :users, :lists do |t|
+      t.references :user
+      t.references :list
+    end
   end
 end
