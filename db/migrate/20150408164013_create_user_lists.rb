@@ -3,6 +3,7 @@ class CreateUserLists < ActiveRecord::Migration
     create_table :user_lists do |t|
       t.references :user, index: true
       t.references :list, index: true
+      t.references :task, index: true
 
       t.timestamps null: false
     end
