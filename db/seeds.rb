@@ -15,5 +15,6 @@ list1 = List.create(title:"First ToDo List")
 UserList.create(user:jon,list:list1)
 UserList.create(user:pearl, list:list1)
 
-UserTask.create(user_id: 1, task_id: 1)
+UserTask.create(user_id:1,task_id:1)
+
 
