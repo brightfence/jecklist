@@ -1,0 +1,11 @@
+<br><br>
+Login<br>
+<%= form_for login_path, :url => { :action => "create", :controller=> "sessions" } do |f| %>
+  <%= f.label :name %><br>
+  <%= f.text_field :name %><br>
+
+  <%= f.label :password %><br>
+  <%= f.password_field :password %><br><br>
+
+  <%= f.submit %>
+<% end %>
