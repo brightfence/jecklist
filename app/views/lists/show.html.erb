@@ -1,0 +1,9 @@
+<h1><%= @list.title %></h1>
+
+  <% if @list.tasks.count != 0 %>
+    <% @list.tasks.each do |task| %>
+      <%= task.description %>
+    <% end %>
+  <% else %>
+    <p>There are no tasks at the moment.<p>
+  <% end %>
