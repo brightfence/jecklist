@@ -1,0 +1,13 @@
+<h2>Create a new account</h2>
+  <%= form_for @user do |f| %>
+    <%= f.label :name %><br>
+    <%= f.text_field :name, placeholder: "Enter Name" %><br>
+
+    <%= f.label :password %><br>
+    <%= f.password_field :password, placeholder: "Enter Password" %><br>
+
+    <%= f.label :password_confirmation %><br>
+    <%= f.password_field :password_confirmation, placeholder: "Confirm Password" %><br><br>
+
+    <%= f.submit "Create Account" %>
+  <% end %>
