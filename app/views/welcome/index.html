@@ -1,0 +1,9 @@
+Welcome Homepage<br><br>
+
+<% @users.each do |user| %>
+  <%= user.name %>
+<% end %>
+
+
+<%= render 'sessions/login' %>
+<%# render 'users/new' %>
