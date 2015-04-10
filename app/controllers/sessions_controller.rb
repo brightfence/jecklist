@@ -7,7 +7,7 @@ class SessionsController
 
     if user
       session[:user_id] = user.id
-      redirect_to user_path(user)
+      redirect_to root_path
     else
       session[:errors] = "Invalid login credentials"
       redirect_to root_path
