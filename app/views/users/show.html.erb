@@ -4,7 +4,8 @@
 <h2>All Lists</h2>
 
 <% @user.jecklists.each do |list| %>
-  <%= list.title %>
+<div class="sm-col sm-col-4 px2">
+  <h3><%= list.title %></h3>
 
   <h3>Users participating in this list:</h3>
 
@@ -13,5 +14,6 @@
     <li><%= user.name %></li>
   <% end %>
   </ul>
+  </div>
 
 <% end %>
