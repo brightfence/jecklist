@@ -1,0 +1,9 @@
+<h1>Create a new Jecklist</h1>
+
+<%= form_for @new_list do |f| %>
+  <%= f.label :Title %>
+  <br>
+  <%= f.text_field :title, placeholder: "Enter Title" %>
+  <br>
+  <%= f.submit "Create a new JeckList" %>
+<% end %>
