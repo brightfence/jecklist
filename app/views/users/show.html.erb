@@ -1,0 +1,9 @@
+<h1><%= @user.name %>'s page</h1>
+<hr>
+
+<h2>All Lists</h2>
+
+<% @user.jecklists.each do |list| %>
+  <%= list.title %>
+
+<% end %>
