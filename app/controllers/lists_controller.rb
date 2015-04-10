@@ -6,7 +6,21 @@ class ListsController < ApplicationController
   end
 
   def show
+    @list = List.find(params[:id])
+  end
 
+  def new
+    @new_list = List.new
+  end
+
+  def create
+    @list = List.new(list_params)
+
+    if @list.save
+      redirect_to @list
+    else
+      @list.errors = "Error"
+    end
   end
 
   private
