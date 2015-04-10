@@ -1,0 +1,19 @@
+<h1><%= @user.name %>'s page</h1>
+<hr>
+
+<h2>All Lists</h2>
+
+<% @user.jecklists.each do |list| %>
+<div class="sm-col sm-col-4 px2">
+  <h3><%= list.title %></h3>
+
+  <h3>Users participating in this list:</h3>
+
+  <ul>
+  <% list.assigned_users.each do |user| %>
+    <li><%= user.name %></li>
+  <% end %>
+  </ul>
+  </div>
+
+<% end %>
