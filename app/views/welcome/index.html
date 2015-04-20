@@ -3,5 +3,18 @@
 
 
 
-<%= render 'sessions/login' %>
-<%# render 'users/new' %>
+
+
+<div class="signup">
+  <% if current_user %>
+    <h2> Welcome, <%= "#{current_user.name}" %><br><br>
+      <%= link_to 'Logout', logout_path(current_user) %>
+      <%# render 'lists/new' %><br>
+      <%= link_to 'Add a new jecklist', new_list_path %>
+  <% else %>
+    <h3> signup! </h3>
+      <%= render 'users/new' %>
+      <h3>Login</h3>
+      <%= render 'sessions/login' %>
+  <% end %>
+</div>
