@@ -9,8 +9,13 @@ class TasksController < ApplicationController
   end
 
   def create
-    @task = Task.create(task_params)
-
+    @task = Task.create!(task_params)
+    @list = List.find_by(@task.list_id)
+    if @task.save
+      redirect_to list_path(@list)
+    else
+      flash[:notice] = "There was an error saving your task."
+    end
   end
 
 
